@@ -6,4 +6,4 @@
 - Enhance my web development skills through HTML and CSS
 - Create an intriguing Capstone project that captivates the audience and sends the job offers flying in
 - Attain marketable skills that will ensure I am never without a rewarding career
-- Network with like minded professionals to grow my network
+- Grow my network with like minded professionals
