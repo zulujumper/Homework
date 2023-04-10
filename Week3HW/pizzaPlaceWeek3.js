@@ -18,20 +18,19 @@ function getPizzaOrder(size, crust, ...toppings) {
   for (let topping of toppings) {
     order += `${topping}, `
   }
-    console.log(`${order} coming up!`);
+    console.log(`${order}coming up!`);
     return `${size}, ${crust}, ${toppings}`;
 };
 
 function preparePizza([size, crust, toppings]) {
-    console.log("...Cooking pizza...");
+    console.log("...your pizza is cooking...");
     let pizzaObj = {
-      size: "Ginormous",
-      crust: "Thin",
-      toppings: "Chicken, Bacon, Spinach, Artichoke"
+      size: "ginormous",
+      crust: "thin",
+      toppings: "chicken, bacon, spinach, artichoke"
     };
     return pizzaObj;
 }
-
 
 function servePizza(pizzaObj) {
   console.log(`Pizza is ready, one ${pizzaObj['size']} ${pizzaObj['crust']} pizza with ${pizzaObj['toppings']}... Enjoy!`)
@@ -39,7 +38,4 @@ function servePizza(pizzaObj) {
 }
 
 greetCustomer();
-// getPizzaOrder();
-// preparePizza(getPizzaOrder());
-// servePizza();
-servePizza(preparePizza(getPizzaOrder("Ginormous", "Thin", ["Chicken, Bacon, Spinach, Artichoke"])));
+servePizza(preparePizza(getPizzaOrder()));
