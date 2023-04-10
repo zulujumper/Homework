@@ -19,23 +19,23 @@ function getPizzaOrder(size, crust, ...toppings) {
     order += `${topping}, `
   }
     console.log(`${order}coming up!`);
-    return `${size}, ${crust}, ${toppings}`;
+  return [size, crust, toppings];
 };
 
 function preparePizza([size, crust, toppings]) {
     console.log("...your pizza is cooking...");
     let pizzaObj = {
-      size: "ginormous",
-      crust: "thin",
-      toppings: "chicken, bacon, spinach, artichoke"
+      size: size,
+      crust: crust,
+      toppings: toppings 
     };
     return pizzaObj;
 }
 
 function servePizza(pizzaObj) {
-  console.log(`Pizza is ready, one ${pizzaObj['size']} ${pizzaObj['crust']} pizza with ${pizzaObj['toppings']}... Enjoy!`)
+  console.log(`Pizza is ready, one ${pizzaObj.size} ${pizzaObj.crust} pizza with ${pizzaObj.toppings}... Enjoy!`)
   return pizzaObj;
 }
 
 greetCustomer();
-servePizza(preparePizza(getPizzaOrder()));
+servePizza(preparePizza(getPizzaOrder("ginormous", "thin", "chicken", "bacon", "spinach", "artichoke" )));
