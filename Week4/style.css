@@ -1,0 +1,15 @@
+* {
+    font-family: 'Lucida Sans';
+    border: 2px;
+    border-color: crimson;
+}
+
+.name, .jobTitle {
+    color: blue; 
+    flex: auto; 
+}
+
+.links:hover {
+    color:darkslateblue;
+}
+
