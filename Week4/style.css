@@ -1,15 +1,37 @@
 * {
     font-family: 'Lucida Sans';
-    border: 2px;
-    border-color: crimson;
 }
 
-.name, .jobTitle {
-    color: blue; 
-    flex: auto; 
+body {
+    background-color: black;
+    color: white;
+}
+
+
+#headline {
+    box-sizing: border-box;
+    width: auto;
+    background-color: darkslategrey;
+    padding: 10px;
+    border: 2px solid white;
 }
 
 .links:hover {
     color:darkslateblue;
 }
 
+.eggs {
+    width: 5%;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 1px;
+}
+.certs, .links {
+    font-size: larger;
+}
+
+#name:hover {
+    color: blue;
+}
