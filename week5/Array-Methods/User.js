@@ -1,4 +1,4 @@
-[
+let data = [
   {
     "id": 1,
     "name": "Leanne Graham",
@@ -230,3 +230,15 @@
     }
   }
 ]
+//create and print a list of phone numbers
+let phoneNums = [];
+data.map(nums => phoneNums.push(nums.phone)
+  );
+  console.log(phoneNums);
+
+// create and print a list of website and email pairs (pair them in a string, array, or object)
+let webmail =[];
+data.map(wmail => webmail.push(`Website: ${wmail.website} & email: ${wmail.email}`)
+  );
+  console.log(webmail);
+  
