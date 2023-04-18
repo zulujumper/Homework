@@ -1,4 +1,4 @@
-[
+let data = [
     {
       "userId": 1,
       "id": 1,
@@ -300,3 +300,18 @@
       "completed": true
     }
   ]
+//   {
+//     "userId": 3,
+//     "id": 50,
+//     "title": "cupiditate necessitatibus ullam aut quis dolor voluptate",
+//     "completed": true
+//   }
+// 
+//   create a list of user 9's to-dos
+
+let three = data.filter(todo => todo.userId === 3) 
+console.log(three);
+
+// then find the number of user 9's incomplete tasks
+let incomp = three.filter(comp => comp.completed === false)
+console.log(`User 3 has ${incomp.length} incomplete tasks.`);

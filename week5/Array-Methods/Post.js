@@ -1,4 +1,4 @@
-[
+ let data = [
     {
       "userId": 1,
       "id": 1,
@@ -300,3 +300,18 @@
       "body": "error suscipit maxime adipisci consequuntur recusandae\nvoluptas eligendi et est et voluptates\nquia distinctio ab amet quaerat molestiae et vitae\nadipisci impedit sequi nesciunt quis consectetur"
     }
   ]
+  // {
+  //   "userId": 1,
+  //   "id": 1,
+  //   "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  //   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  // },
+//   create a list of user 5's posts
+let five = data.filter(fiver => fiver.userId === 5);
+console.log(five);
+
+// then, create a list of title and body pairs
+let tbpairs = [];
+data.map(pairs =>
+  tbpairs.push(`Title: ${pairs.title} and body: ${pairs.body}`));
+  console.log(tbpairs);
