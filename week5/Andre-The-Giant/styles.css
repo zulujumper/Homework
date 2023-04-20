@@ -1,45 +1,48 @@
 html {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
   }
   
-  body {
-    text-align: justify;
-    font-size: 18px;
+body {
+  text-align: justify;
+  font-size: 18px;
   }
   
-  h1, h2 {
-    text-align: center;
-    color: rgb(218, 60, 32)
+h1, h2 {
+  text-align: center;
+  color: rgb(218, 60, 32)
   }
     
-  div {
-    border: 2px solid #000000;
-    margin: 10px;
-    padding: 15px
+div {
+  border: 2px solid #000000;
+  margin: 10px;
+  padding: 15px
   }
   
+img {
+  width: 100%;
+  height: auto;
+  }
+
+#stuff {
+  text-align: center;
+  }
+
+#bio > li {
+  text-align: left;
+  }
+
+#achievements > li {
+  text-align: left
+  }
+
+@media (max-width: 375px) {
+    
   img {
     width: 100%;
     height: auto;
-  }
+    }
   #stuff {
     text-align: center;
-  }
-  #bio > li {
-    text-align: left;
-  }
-  #achievements > li {
-    text-align: left
-  }
-
-  @media (max-width: 375px) {
-    
-    img {
-      width: 100%;
-      height: auto;
-    }
-    #stuff {
-      text-align: center;
     }
   }
   
