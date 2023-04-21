@@ -307,13 +307,6 @@ let data = [
 //     "completed": false
 //   },
 
-// let three = data.filter(todo => todo.userId === 3) 
-// console.log(three);
-
-// // then find the number of user 9's incomplete tasks
-// let incomp = three.filter(comp => comp.completed === false)
-// console.log(`User 3 has ${incomp.length} incomplete tasks.`);
-
 // create an object that summarizes the incomplete tasks of users 3, 7, & 8
 
 // ex:
@@ -323,38 +316,60 @@ let data = [
 //     totalIncomplete: y,
 //     incompleteTasks: [title1, title2, title3, ...]
 //   },
-//   user7: ...
+
+function userObj(userNum) { 
+    let theUseris = data.filter(todo => todo.userId === userNum)
+    let incompNum = theUseris.filter(comp => comp.completed === false).length
+    let theirTotalTasks = theUseris.map(total => total.completed).length
+    let theirIncomplete = theUseris.filter(incomp => incomp.completed === false)
+    let theirIncompleteTitlesAre = theirIncomplete.map(notDun => notDun.title)
+    let userObj = {
+      totalTasks: theirTotalTasks,
+      totalIncomplete: incompNum,
+      incompleteTasks: theirIncompleteTitlesAre
+    }
+    console.log(userObj);
+    return userObj
+    
+};
+
+userObj(2);
+userObj(3);
+
+//results below:
+
+// $ node bonus.js
+// {
+//   totalTasks: 20,
+//   totalIncomplete: 12,
+//   incompleteTasks: [
+//     'suscipit repellat esse quibusdam voluptatem incidunt',
+//     'et itaque necessitatibus maxime molestiae qui quas velit',
+//     'adipisci non ad dicta qui amet quaerat doloribus ea',
+//     'nesciunt totam sit blanditiis sit',
+//     'laborum aut in quam',
+//     'repudiandae totam in est sint facere fuga',
+//     'earum doloribus ea doloremque quis',
+//     'sint sit aut vero',
+//     'porro aut necessitatibus eaque distinctio',
+//     'sunt cum tempora',
+//     'totam quia non',
+//     'doloremque quibusdam asperiores libero corrupti illum qui omnis'
+//   ]
 // }
-let three = data.filter(todo => todo.userId === 3)
-let incomp = three.filter(comp => comp.completed === false)
-let totalIncomplete = incomp.length;
-let totalTasks = three.map(total => total.completed)
-let incompleteTasks = incomp.map(notDun => notDun.title)
-
-// console.log(totalTasks.length);
-// console.log(incompleteTasks);
-
-let user3 = {
-    totalTasks: totalTasks.length,
-    totalIncomplete: totalIncomplete,
-    incompleteTasks: incompleteTasks
-};
-
-console.log(user3);
-
-function userFilter(userNum) { 
-    return data.filter(todo => todo.userId === userNum)
-};
-
-function userIncomplete(userIncom) {
-    return (userIncom.filter(comp => comp.completed === false)).length
-};
-function userTotalTasks (uTT) {
-    return uTT.map(total => total.completed)
-};
-function userIncompleteTitle(userTitles) {
-    return userTitles.map(notDun => notDun.title)
-};
+// {
+//   totalTasks: 10,
+//   totalIncomplete: 7,
+//   incompleteTasks: [
+//     'aliquid amet impedit consequatur aspernatur placeat eaque fugiat suscipit',
+//     'rerum perferendis error quia ut eveniet',
+//     'velit soluta adipisci molestias reiciendis harum',
+//     'vel voluptatem repellat nihil placeat corporis',
+//     'nam qui rerum fugiat accusamus',
+//     'sit reprehenderit omnis quia',
+//     'ut necessitatibus aut maiores debitis officia blanditiis velit et'
+//   ]
+// }
 
 
 
