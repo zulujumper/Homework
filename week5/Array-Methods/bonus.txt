@@ -1,0 +1,62 @@
+// let three = data.filter(todo => todo.userId === 3) 
+// console.log(three);
+
+// // then find the number of user 9's incomplete tasks
+// let incomp = three.filter(comp => comp.completed === false)
+// console.log(`User 3 has ${incomp.length} incomplete tasks.`);
+
+
+//   user7: ...
+// }
+// let three = data.filter(todo => todo.userId === 3)
+// let incomp = three.filter(comp => comp.completed === false)
+// let totalIncomplete = incomp.length;
+// let totalTasks = three.map(total => total.completed)
+// let incompleteTasks = incomp.map(notDun => notDun.title)
+
+// console.log(totalTasks.length);
+// console.log(incompleteTasks);
+
+// let user3 = {
+//     totalTasks: totalTasks.length,
+//     totalIncomplete: totalIncomplete,
+//     incompleteTasks: incompleteTasks
+// };
+
+// console.log(user3);
+
+//filters by user number
+// function userFilter(userNum) { 
+//     let theUseris = data.filter(todo => todo.userId === userNum)
+//     // console.log(theUseris);
+//     return theUseris
+// };
+
+// //returns number of incomplete tasks 
+// function userIncomplete(userIncom) {
+//     let theirIncompleteTasksAre = (userIncom.filter(comp => comp.completed === false))
+//     console.log(theirIncompleteTasksAre.length);
+//     return [theirIncompleteTasksAre.length]
+// };
+
+// //returns total tasks per user
+// function userTotalTasks (uTT) {
+//      let theirTotalTasks = uTT.map(total => total.completed).length
+//      console.log(theirTotalTasks);
+//      return theirTotalTasks
+// };
+// //returns user's uncompleted titles
+// function userIncompleteTitle(userTitles) {
+//     let theirIncompleteTitlesAre = (userTitles.filter(incomp => incomp.completed === false))
+//     console.log(theirIncompleteTitlesAre.map(notDun => notDun.title));
+//     return theirIncompleteTitlesAre.map(notDun => notDun.title)
+// };
+
+// userIncompleteTitle(userTotalTasks(userIncomplete(userFilter(2, 3))));
+// userFilter(2);
+
+// userIncomplete(userFilter(2));
+
+// userTotalTasks(userFilter(2));
+
+// userIncompleteTitle((userFilter(2)));
